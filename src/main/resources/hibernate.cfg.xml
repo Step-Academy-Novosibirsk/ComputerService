@@ -24,7 +24,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Defining the Maximum active Connection at a time -->
-        <property name="hibernate.connection.pool_size">1</property>
+        <property name="hibernate.connection.pool_size">10</property>
 
         <!-- By Default this Property is set to False if you don't declare this
         Property. if it set to True than you don't need to Commit the Transaction
