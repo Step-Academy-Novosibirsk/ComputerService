@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/clients.js" ></script>
+</head>
+<body onload="editClient()">
+    <form>
+        <label>Id: </label>
+        <input id="Id" type="text" readonly /><br />
+        <label>Имя</label>
+        <input type="text" id="Name" /><br />
+        <label>Адрес: </label>
+        <input type="text" id="Address"><br />
+        <label>Телефон: </label>
+        <input type="text" id="Phone" /><br />
+        <label>Пароль: </label>
+        <input type="password" id="Password"/><br />
+        <input type="button" value="Отправить" onclick="updateClient()"/>
+    </form>
+</body>
+</html>
