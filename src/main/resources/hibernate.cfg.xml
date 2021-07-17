@@ -34,7 +34,8 @@
         <property name="hibernate.connection.autocommit">false</property>
 
         <!-- Mapping Property Declaration -->
-        <mapping class="models.ServiceClient"/>
+        <mapping class="ru.ipgolenischev.computerservice.models.Users.ServiceClientServiceModel"/>
+        <mapping class="ru.ipgolenischev.computerservice.models.Users.ServiceManagerServiceModel" />
 
 
     </session-factory>

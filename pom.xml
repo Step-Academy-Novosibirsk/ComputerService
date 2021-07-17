@@ -12,7 +12,7 @@
     <artifactId>computerservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ComputerService</name>
-    <description>Application for automation of computer services</description>
+    <description>Application for automation of computer ru.ipgolenischev.computerservice.services</description>
     <properties>
         <java.version>11</java.version>
         <repackage.classifier/>
