@@ -9,10 +9,10 @@ import ru.ipgolenischev.computerservice.services.databaseServices.ServiceManager
 
 @RestController
 @RequestMapping("/api/Managers")
-public class ServiceManagerControllerBase extends RestControllerBase<ServiceManagerServiceModel> {
+public class ServiceManagerController extends RestControllerBase<ServiceManagerServiceModel> {
     private final ServiceManagerService serviceManagerService;
 
-    protected ServiceManagerControllerBase(ServiceManagerService serviceManagerService) {
+    protected ServiceManagerController(ServiceManagerService serviceManagerService) {
         super(serviceManagerService);
         this.serviceManagerService = serviceManagerService;
     }

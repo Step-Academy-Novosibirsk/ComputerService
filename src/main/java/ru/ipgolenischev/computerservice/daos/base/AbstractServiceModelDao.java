@@ -18,6 +18,7 @@ public abstract class AbstractServiceModelDao<T extends AbstractServiceModel> {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.save(abstractServiceModel);
+
         transaction.commit();
         session.close();
     }

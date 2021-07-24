@@ -8,9 +8,9 @@ import ru.ipgolenischev.computerservice.services.databaseServices.ServiceClientS
 
 @RestController
 @RequestMapping("api/Clients")
-public class ServiceClientsControllerBase extends RestControllerBase<ServiceClientServiceModel> {
+public class ServiceClientsController extends RestControllerBase<ServiceClientServiceModel> {
     private final ServiceClientService serviceClientService;
-    public ServiceClientsControllerBase(ServiceClientService serviceClientService) {
+    public ServiceClientsController(ServiceClientService serviceClientService) {
         super(serviceClientService);
         this.serviceClientService = serviceClientService;
     }

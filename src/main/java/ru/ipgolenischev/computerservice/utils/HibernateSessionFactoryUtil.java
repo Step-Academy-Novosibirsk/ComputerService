@@ -1,5 +1,6 @@
 package ru.ipgolenischev.computerservice.utils;
 
+import ru.ipgolenischev.computerservice.models.ServiceOrderModel;
 import ru.ipgolenischev.computerservice.models.Users.ServiceClientServiceModel;
 import ru.ipgolenischev.computerservice.models.Users.ServiceManagerServiceModel;
 import org.hibernate.SessionFactory;
@@ -16,6 +17,7 @@ public class HibernateSessionFactoryUtil {
             Configuration configuration = new Configuration().configure();
             configuration.addAnnotatedClass(ServiceClientServiceModel.class);
             configuration.addAnnotatedClass(ServiceManagerServiceModel.class);
+            configuration.addAnnotatedClass(ServiceOrderModel.class);
             StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
             sessionFactory= configuration.buildSessionFactory(builder.build());
         }
