@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Edit order</title>
+        <script src="../js/orders.js"></script>
+    </head>
+    <body onload="loadClients()">
+        <form id="orderForm">
+            <label>Описание заказа:</label>
+            <textarea id="orderDescription" ></textarea><br />
+            <label>Комментарий к заказу:</label>
+            <input type="text" id="orderComment" /><br />
+            <label>Выберите клиента:</label>
+            <select id="orderClients"  onselect="selectionChanged()">
+                <option id="-1" label="Создать нового клиента" onclick="selectionChanged()"/>
+            </select>
+            <div id="clientForm">
+                <label >Имя</label>
+                <input type="text" id="Name" /><br />
+                <label>Адрес: </label>
+                <input type="text" id="Address"><br />
+                <label >Телефон: </label>
+                <input type="text" id="Phone"/><br />
+                <label >Пароль: </label>
+                <input type="password" id="Password"/><br />
+            </div>
+        </form>
+    </body>
+</html>

@@ -21,7 +21,7 @@
         	3) validate - validates the Schema and Perform User Operations
         	4) create-drop - creates the schema on session creation and drops the schema at the end of the session
         -->
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Defining the Maximum active Connection at a time -->
         <property name="hibernate.connection.pool_size">10</property>
