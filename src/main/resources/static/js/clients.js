@@ -105,6 +105,9 @@ async function updateClient(){
     }
 
 }
+async function loadOrders(id){
+
+}
 async function addClient(){
     let client = getClientParameters();
     client.id =0;

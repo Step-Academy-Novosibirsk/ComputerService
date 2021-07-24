@@ -7,6 +7,10 @@ import ru.ipgolenischev.computerservice.controllers.base.RestControllerBase;
 import ru.ipgolenischev.computerservice.models.ServiceOrderModel;
 import ru.ipgolenischev.computerservice.services.databaseServices.ServiceOrderService;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.util.Date;
+
 @RestController
 @RequestMapping("/api/Orders")
 public class ServiceOrdersController extends RestControllerBase<ServiceOrderModel> {
@@ -17,12 +21,13 @@ public class ServiceOrdersController extends RestControllerBase<ServiceOrderMode
     }
     @GetMapping("/Order/{id}")
     public ServiceOrderModel getOrderById(@PathVariable int id){
-        return serviceOrderService.findModelByIdt(id);
+        return serviceOrderService.findModelById(id);
     }
 
     @PutMapping("/Orders/Update/{id}")
     public ResponseEntity updateServiceOrder(@PathVariable int id, @RequestBody ServiceOrderModel serviceOrderModel){
         serviceOrderModel.setId(id);
+        serviceOrderModel.setStartDate(Date.from(Instant.from(LocalDate.now())));
         serviceOrderService.update(serviceOrderModel);
         return ResponseEntity.status(HttpStatus.OK).build();
     }

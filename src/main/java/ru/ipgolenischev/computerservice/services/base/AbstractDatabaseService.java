@@ -15,7 +15,7 @@ public abstract class AbstractDatabaseService<T extends AbstractServiceModel> {
     public void save(T abstractServiceModel){
         abstractServiceModelDao.save(abstractServiceModel);
     }
-    public T findModelByIdt(int id){
+    public T findModelById(int id){
         return abstractServiceModelDao.findById(id);
     }
     public void update(T abstractServiceModel){

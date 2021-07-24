@@ -18,7 +18,7 @@ public class ServiceManagerController extends RestControllerBase<ServiceManagerS
     }
     @GetMapping("/Manager/{id}")
     public ServiceManagerServiceModel getClientById(@PathVariable int id){
-        return serviceManagerService.findModelByIdt(id);
+        return serviceManagerService.findModelById(id);
     }
     @PutMapping("Manager/Update/{id}")
     public ResponseEntity updateServiceClient(@PathVariable int id,@RequestBody ServiceManagerServiceModel serviceManagerModel){
