@@ -1,5 +1,7 @@
 package ru.ipgolenischev.computerservice.models.base;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @MappedSuperclass

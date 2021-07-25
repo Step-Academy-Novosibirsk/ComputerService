@@ -1,5 +1,8 @@
 async function loadClients(){
-  let response =  await fetch("http://localhost:8080/api/Clients/");
+    let key = sessionStorage.getItem('userKey');
+    if(key==null)
+        window.location = "http://localhost:8080/clients/authorize.html"
+  let response =  await fetch("http://localhost:8080/api/Clients/apikey="+key);
   if(response.ok) {
       let clients = await response.json();
       let table = document.getElementById('Clients');
