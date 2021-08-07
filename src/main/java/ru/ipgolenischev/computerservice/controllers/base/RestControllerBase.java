@@ -13,10 +13,8 @@ public abstract class RestControllerBase<T extends AbstractServiceModel> {
     protected RestControllerBase(AbstractDatabaseService<T> databaseService){
         this.databaseService = databaseService;
     }
-    @GetMapping("/apikey={apikey}")
-    public ResponseEntity<List<T>> getAll(@PathVariable String apikey){
-        if(!apikey.equals("qwerty"))
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+    @GetMapping("/")
+    public ResponseEntity<List<T>> getAll(){
         return ResponseEntity.status(200).body(databaseService.findAll());
     }
     @PostMapping("/Add")
